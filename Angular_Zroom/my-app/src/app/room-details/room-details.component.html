@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="room-details">
+    <div class="image-gallery">
+      <div class="main-image">
+        <img [src]="'http://localhost:8082' + selectedImage" alt="Main Room Image" />
+      </div>
+      <div class="thumbnail-images">
+        <img
+          *ngFor="let img of room?.images"
+          [src]="'http://localhost:8082' + img"
+          alt="Room Thumbnail"
+          (click)="selectImage(img)"
+        />
+      </div>
+    </div>
+
+    <div class="room-info">
+      <h2>🏡 Plot ID: <span>{{ room?.plotId }}</span></h2>
+      <p><strong>👤 Admin:</strong> {{ room?.adminName }}</p>
+      <p><strong>📞 Contact:</strong> {{ room?.contactInfo }}</p>
+      <p><strong>🌍 Area Type:</strong> {{ room?.areaType }}</p>
+      <p><strong>📍 Location:</strong> {{ room?.location }}</p>
+      <p><strong>🗺️ Full Address:</strong> {{ room?.fullAddress }}</p>
+      <p><strong>🏘️ Room Type:</strong> {{ room?.roomType }}</p>
+      <p><strong>🎨 Quality:</strong> {{ room?.quality }}</p>
+      <p><strong>💰 Price:</strong> ₹{{ room?.roomPrice }}</p>
+      <p><strong>📊 Status:</strong>
+        <span [ngClass]="{'available': room?.roomStatus === 'Available', 'occupied': room?.roomStatus === 'Occupied'}">
+          {{ room?.roomStatus }}
+        </span>
+      </p>
+    </div>
+  </div>
+</div>

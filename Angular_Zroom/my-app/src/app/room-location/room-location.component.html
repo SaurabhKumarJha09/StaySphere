@@ -1,0 +1,30 @@
+<div class="container" *ngIf="loc && loc.length > 0; else noRooms">
+  <h2 class="title">Rooms in "{{ selectedRoomLocation }}"</h2>
+
+  <div class="card-grid">
+    <div class="room-card" *ngFor="let room of loc">
+
+      <div class="room-image" *ngIf="room.images && room.images.length > 0">
+        <img [src]="'http://localhost:8082' + room.images[0]" alt="Room Image" class="room-img" />
+      </div>
+
+      <h3>{{ room.plotId }}</h3>
+      <p><strong>Area Type:</strong> {{ room.areaType }}</p>
+      <p><strong>Location:</strong> {{ room.location }}</p>
+      <p><strong>Room Type:</strong> {{ room.roomType }}</p>
+      <p><strong>Price:</strong> ₹{{ room.roomPrice }}</p>
+      <p><strong>Status:</strong>
+        <span [ngClass]="{'available': room.roomStatus === 'Available', 'occupied': room.roomStatus === 'Occupied'}">
+          {{ room.roomStatus }}
+        </span>
+      </p>
+      <button class="explore" [routerLink]="['/room-details/details', room.adminId]">View Details</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #noRooms>
+  <div class="container">
+    <h2 class="title">No rooms found for "{{ selectedRoomLocation }}"</h2>
+  </div>
+</ng-template>

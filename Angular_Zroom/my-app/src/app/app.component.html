@@ -1,0 +1,84 @@
+
+<!-- Navigation Bar (Fixed on all pages) -->
+<header class="navbar">
+  <div class="logo">
+    <span>🚀 Roomie</span>
+  </div>
+
+  <div class="hamburger" (click)="toggleMenu()">&#9776;</div>
+
+  <ul class="nav-links" [class.active]="menuOpen">
+    <li>
+      <a routerLink="/home" class="nav-menu"><b class="fonttt">Home</b></a>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="nav-menu"><b class="fonttt">Rooms</b></a>
+      <ul class="dropdown-content">
+        <!-- Area Type -->
+        <li class="sub-dropdown">
+          <a href="#">Area ➤</a>
+          <ul class="sub-dropdown-content">
+            <li><a [routerLink]="['/room/area', 'Urban']">Urban</a></li>
+            <li><a [routerLink]="['/room/area', 'Rural']">Rural</a></li>
+          </ul>
+        </li>
+
+
+
+        <!-- Price Range -->
+        <li class="sub-dropdown">
+          <a href="#">Price Range ➤</a>
+          <ul class="sub-dropdown-content">
+            <li><a [routerLink]="['/room/price', '0-5000']">Under ₹5000</a></li>
+            <li><a [routerLink]="['/room/price', '5000-10000']">₹5k - ₹10k</a></li>
+            <li><a [routerLink]="['/room/price', '10000-20000']">₹10k - ₹20k</a></li>
+          </ul>
+        </li>
+
+        <!-- Availability -->
+        <li class="sub-dropdown">
+          <a href="#">Availability ➤</a>
+          <ul class="sub-dropdown-content">
+            <li><a [routerLink]="['/room/status', 'Available']">Available</a></li>
+            <li><a [routerLink]="['/room/status', 'Occupied']">Occupied</a></li>
+          </ul>
+        </li>
+
+        <!-- Location -->
+        <li class="sub-dropdown">
+          <a href="#">Location ➤</a>
+          <ul class="sub-dropdown-content">
+            <li><a [routerLink]="['/room/loc', 'Delhi']">Delhi</a></li>
+            <li><a [routerLink]="['/room/loc', 'Mumbai']">Mumbai</a></li>
+            <li><a [routerLink]="['/room/loc', 'Bangalore']">Bangalore</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a routerLink="/about" class="nav-menu"><b class="fonttt">About</b></a>
+    </li>
+    <li>
+      <a routerLink="/contact" class="nav-menu"><b class="fonttt">Contact</b></a>
+    </li>
+  </ul>
+</header>
+
+<!-- Routed content appears here -->
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+

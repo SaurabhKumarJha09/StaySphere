@@ -1,0 +1,55 @@
+<!--<div class="container">-->
+<!--  <h2 class="title">Rooms with Status: "{{ selectedRoomStatus }}"</h2>-->
+
+<!--  <div class="card-grid">-->
+
+<!--    <img *ngIf="room.images && room.images.length > 0"&ndash;&gt;-->
+<!--        [src]="'http://localhost:8082' + room.images[0]"&ndash;&gt;-->
+<!--          alt="Room Image"-->
+<!--          class="card-img" />-->
+
+<!--        <div class="room-card" *ngFor="let room of status">-->
+<!--          <h3>{{ room.plotId }}</h3>-->
+<!--          <p><strong>Area Type:</strong> {{ room.areaType }}</p>-->
+<!--          <p><strong>Location:</strong> {{ room.location }}</p>-->
+<!--          <p><strong>Room Type:</strong> {{ room.roomType }}</p>-->
+<!--          <p><strong>Price:</strong> ₹{{ room.roomPrice }}</p>-->
+<!--          <p><strong>Status:</strong>-->
+<!--            <span [ngClass]="{'available': room.roomStatus === 'Available', 'occupied': room.roomStatus === 'Occupied'}">-->
+<!--              {{ room.roomStatus }}-->
+<!--            </span>-->
+<!--          </p>-->
+<!--          <button class="explore" [routerLink]="['/room-details/details', room.adminId]">View Details</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+
+
+<div class="container">
+  <h2 class="title">Rooms with Status: "{{ selectedRoomStatus }}"</h2>
+
+  <div class="card-grid">
+    <div class="room-card" *ngFor="let room of status">
+
+      <!-- Room Image -->
+      <div class="room-image" *ngIf="room.images && room.images.length > 0">
+        <img [src]="'http://localhost:8082' + room.images[0]" alt="Room Image" class="room-img" />
+      </div>
+
+      <!-- Room Info -->
+      <h3>{{ room.plotId }}</h3>
+      <p><strong>Area Type:</strong> {{ room.areaType }}</p>
+      <p><strong>Location:</strong> {{ room.location }}</p>
+      <p><strong>Room Type:</strong> {{ room.roomType }}</p>
+      <p><strong>Price:</strong> ₹{{ room.roomPrice }}</p>
+      <p><strong>Status:</strong>
+        <span [ngClass]="{'available': room.roomStatus === 'Available', 'occupied': room.roomStatus === 'Occupied'}">
+          {{ room.roomStatus }}
+        </span>
+      </p>
+      <button class="explore" [routerLink]="['/room-details/details', room.adminId]">View Details</button>
+    </div>
+  </div>
+</div>

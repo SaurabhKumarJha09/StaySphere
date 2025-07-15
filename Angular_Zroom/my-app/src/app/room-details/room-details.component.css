@@ -1,0 +1,109 @@
+.container {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+  min-height: 100vh;
+}
+
+.room-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-image img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 4px solid #b3e5fc;
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.thumbnail-images img {
+  height: 80px;
+  width: 100px;
+  border-radius: 8px;
+  cursor: pointer;
+  object-fit: cover;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border 0.3s;
+}
+
+.thumbnail-images img:hover {
+  border: 2px solid #00bcd4;
+  transform: scale(1.05);
+}
+
+.room-info {
+  background: #e3f2fd;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.1);
+  transition: all 0.3s ease;
+}
+
+.room-info h2 {
+  margin-top: 0;
+  color: #0d47a1;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.room-info p {
+  margin: 0.6rem 0;
+  font-size: 1.1rem;
+  color: #263238;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.available {
+  color: #1b5e20;
+  font-weight: bold;
+  padding: 4px 10px;
+  background: #c8e6c9;
+  border-radius: 6px;
+}
+
+.occupied {
+  color: #c62828;
+  font-weight: bold;
+  padding: 4px 10px;
+  background: #ffcdd2;
+  border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+  .room-details {
+    flex-direction: row;
+  }
+
+  .image-gallery {
+    flex: 2;
+  }
+
+  .room-info {
+    flex: 1;
+    margin-left: 2rem;
+  }
+}
+

@@ -1,0 +1,188 @@
+/* Gradient background and text styling for the About section */
+.about {
+  /* background: linear-gradient(to right, #1e90ff, #00ced1); */
+  background: linear-gradient(135deg, #909ba5, #314041);
+
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.about .write {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about .text {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Mission section styling */
+.mission {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: white;
+}
+
+.mission .text1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #111827; /* Dark text */
+}
+
+.mission .text2 {
+  font-size: 1.125rem;
+  color: #4B5563; /* Tailwind's gray-700 */
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+
+.values-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f9fafb;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  width: 220px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.value-card .icon {
+  height: 40px;
+  margin-bottom: 1rem;
+  filter: brightness(0) saturate(100%) invert(34%) sepia(96%) saturate(1855%) hue-rotate(189deg) brightness(97%) contrast(103%);
+}
+
+.value-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.story-section {
+  padding: 60px 20px;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.story-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #111827;
+}
+
+.story-text {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+
+
+.leadership-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111827;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.team-member {
+  max-width: 250px;
+  text-align: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  /* background: linear-gradient(135deg, #1e90ff, #17c5c5); */
+  background: linear-gradient(135deg, #909ba5, #314041);
+
+  color: white;
+  font-weight: 600;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.team-member h3 {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.position {
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: inline-block;
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+

@@ -1,0 +1,80 @@
+<!--<div class="container">-->
+<!--  <h2 class="title">Rooms in "{{ selectedAreaType }}" Area</h2>-->
+
+<!--  <div class="card-grid">-->
+<!--    <div class="room-card" *ngFor="let room of rooms">-->
+<!--      <h3>{{ room.plotId }}</h3>-->
+<!--      <p><strong>Area Type:</strong> {{ room.areaType }}</p>-->
+<!--      <p><strong>Location:</strong> {{ room.location }}</p>-->
+<!--      <p><strong>Room Type:</strong> {{ room.roomType }}</p>-->
+<!--      <p><strong>Status:</strong> -->
+<!--        <span [ngClass]="{'available': room.roomStatus === 'Available', 'occupied': room.roomStatus === 'Occupied'}">-->
+<!--          {{ room.roomStatus }}-->
+<!--        </span>-->
+<!--      </p>-->
+<!--      <button class="explore" [routerLink]="['/room-details/details', room.adminId]">View Details</button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+
+<!--<div class="container">-->
+<!--  <h2 class="title">Rooms in "{{ selectedAreaType }}" Area</h2>-->
+
+<!--  <div class="card-grid">-->
+<!--    <div class="room-card" *ngFor="let room of rooms">-->
+<!--      &lt;!&ndash; Room Image &ndash;&gt;-->
+<!--      <div class="room-image">-->
+<!--        <img [src]="'http://localhost:8082' + room.images[0]" alt="Room Image" />-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; Room Info &ndash;&gt;-->
+<!--      <div class="room-info">-->
+<!--        <h3>{{ room.plotId }}</h3>-->
+<!--        <p><strong>Area Type:</strong>-->
+<!--          <span class="badge">{{ room.areaType }}</span>-->
+<!--        </p>-->
+<!--        <p><strong>Location:</strong> {{ room.location }}</p>-->
+<!--        <p><strong>Room Type:</strong> {{ room.roomType }}</p>-->
+<!--        <p><strong>Status:</strong>-->
+<!--          <span [ngClass]="{'available': room.roomStatus === 'Available', 'occupied': room.roomStatus === 'Occupied'}">-->
+<!--            {{ room.roomStatus }}-->
+<!--          </span>-->
+<!--        </p>-->
+<!--        <button class="explore" [routerLink]="['/room-details/details', room.adminId]">View Details</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+
+<div class="container">
+  <h2 class="title">Rooms in "{{ selectedAreaType }}" Area</h2>
+
+  <div class="card-grid">
+    <div class="room-card" *ngFor="let room of rooms">
+      <!-- Room Image -->
+      <div class="room-image">
+        <img [src]="'http://localhost:8082' + room.images[0]" alt="Room Image" />
+      </div>
+
+      <!-- Room Info -->
+      <div class="room-info">
+        <h3>{{ room.plotId }}</h3>
+        <p><strong>Area Type:</strong>
+          <span class="badge">{{ room.areaType }}</span>
+        </p>
+        <p><strong>Location:</strong> {{ room.location }}</p>
+        <p><strong>Room Type:</strong> {{ room.roomType }}</p>
+        <p><strong>Status:</strong>
+          <span [ngClass]="{'available': room.roomStatus === 'Available', 'occupied': room.roomStatus === 'Occupied'}">
+            {{ room.roomStatus }}
+          </span>
+        </p>
+        <button class="explore" [routerLink]="['/room-details/details', room.adminId]">View Details</button>
+      </div>
+    </div>
+  </div>
+</div>

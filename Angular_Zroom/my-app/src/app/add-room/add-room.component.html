@@ -1,0 +1,39 @@
+<div class="room-form-container">
+  <h2>Add New Room</h2>
+  <form [formGroup]="roomForm" (ngSubmit)="submitRoom()">
+    <div class="form-grid">
+      <input formControlName="plotId" type="text" placeholder="Plot ID" required />
+      <input formControlName="adminName" type="text" placeholder="Admin Name" />
+      <input formControlName="contactInfo" type="text" placeholder="Contact Info" />
+      <select formControlName="areaType">
+        <option value="Urban">Urban</option>
+        <option value="Rural">Rural</option>
+      </select>
+      <input formControlName="location" type="text" placeholder="Location" />
+      <input formControlName="fullAddress" type="text" placeholder="Full Address" />
+      <select formControlName="roomType">
+        <option>1 BHK</option>
+        <option>2 BHK</option>
+        <option>3 BHK</option>
+      </select>
+      <select formControlName="quality">
+        <option>Furnished</option>
+        <option>Semi-Furnished</option>
+        <option>Unfurnished</option>
+      </select>
+      <input formControlName="roomPrice" type="text" placeholder="Room Price (₹)" />
+      <select formControlName="roomStatus">
+        <option>Available</option>
+        <option>Occupied</option>
+      </select>
+      <input formControlName="title" type="text" placeholder="Room Title" />
+      <textarea formControlName="description" rows="3" placeholder="Room Description"></textarea>
+
+      <!-- ✅ File Upload -->
+      <label>Upload Images</label>
+      <input type="file" (change)="onFileChange($event)" multiple />
+    </div>
+
+    <button class="submit-btn" type="submit" [disabled]="roomForm.invalid">Submit Room</button>
+  </form>
+</div>

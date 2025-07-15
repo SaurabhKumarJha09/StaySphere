@@ -1,0 +1,79 @@
+ .search-box {
+      max-width: 600px;
+      margin: 0 auto 25px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      padding: 20px;
+      background: white;
+    }
+    .filters {
+      margin-top: 20px;
+    }
+    .filters .btn {
+      margin: 5px 6px;
+      font-weight: 500;
+    }
+     .row {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    .row h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+    }
+
+    .row h1 .text-primary {
+      color: #007bff;
+    }
+
+    .row p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .popular-destinations {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .popular-destinations .badge {
+      margin: 5px 8px;
+      font-size: 0.90rem;
+      padding: 8px 14px;
+      background-color: #f1f1f1;
+      color: black;
+    }
+
+    .feature{
+      padding-right: 12px;
+      padding-left: 12px;
+      font-size: 0.89rem;
+      background-color: #eeca00;
+      border-radius: 14px;
+    }
+
+
+
+
+    .popular-destinations {
+  margin: 20px 0;
+}
+
+.popular-destinations .badge {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  margin: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.popular-destinations .badge:hover {
+  background-color: #2563eb;
+}
